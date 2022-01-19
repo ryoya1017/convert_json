@@ -1,11 +1,11 @@
 import json
 
-json_file = open('sample.json', 'r', encoding='utf-8')
-json_str=json_file.read()
+json_file = open('sample.json', 'r', encoding='ANSI')
+json_str = json_file.read()
 json_str = json_str.replace('\\', '/')
 print(json_str)
 json_object = json.loads(json_str)
-objects_name=[]
+objects_name = []
 
 #print(json_object[0]["objects"][0]["name"])
 #print(json_object[0]["objects"][1]["name"])
@@ -14,7 +14,7 @@ objects_name=[]
 
 
 for w in json_object[0]["objects"]:
-#    print(w["name"])
+    #    print(w["name"])
     objects_name.append(w["name"])
 
 filename = 'objects.json'
